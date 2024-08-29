@@ -9,8 +9,8 @@ export default function Home() {
         <div className={style.container}>
             <div className={style.background}>
                 <div className={style.bgtext}>
-                    <h1 className={style.title}>ABOGACÍA UNC</h1>
-                    <p className={style.subtext}>Obten los conocimientos de la manera más didáctica para que tengas un examen exitoso</p>
+                    <h1 className={style.title}>Profesor de Derecho en IECA</h1>
+                    <h2 className={style.subtext}>Ingreso a la Carrera de Abogacía</h2>
                 </div>
             </div>
             <div className={style.class}>

@@ -6,7 +6,6 @@
     height: 250px;
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -27,8 +26,17 @@
     width: 100%;
     margin: 5px;
     padding: 5px;
+    text-decoration: none;
     display: flex;
     align-items: center;
+}
+
+.contact::before {
+    text-decoration: none;
+}
+
+.contact::after {
+    text-decoration: none;
 }
 
 .logo {
@@ -69,7 +77,7 @@
         height: auto;
         flex-direction: column;
         align-items: center;
-        padding: 20px;
+        padding: 10px 0;
     }
 
     .form {
@@ -85,10 +93,19 @@
 
     .contact {
         height: auto;
+        text-decoration: none;
         justify-content: center;
         margin: 10px 0;
     }
 
+    .contact::before {
+        text-decoration: none;
+    }
+    
+    .contact::after {
+        text-decoration: none;
+    }
+    
     .line {
         font-size: 14px;
     }
@@ -98,11 +115,11 @@
 @media (max-width: 480px) {
     .container {
         height: auto;
-        padding: 10px;
+        padding: 5px 0;
     }
 
     .form {
-        width: 100%;
+        width: 90%;
         margin: 10px 0;
     }
 
@@ -114,9 +131,18 @@
 
     .contact {
         flex-direction: column;
+        text-decoration: none;
         align-items: center;
     }
 
+    .contact::before {
+        text-decoration: none;
+    }
+    
+    .contact::after {
+        text-decoration: none;
+    }
+    
     .logo {
         height: 20px;
         width: 20px;

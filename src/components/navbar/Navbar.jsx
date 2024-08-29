@@ -1,26 +1,36 @@
-import { Link } from "react-router-dom"
-import style from "./navbar.module.css"
-import logo from "../../images/tribunal.png"
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import style from "./navbar.module.css";
+import logo from "../../images/tribunal.png";
 
 export default function Navbar() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
     return (
         <div className={style.container}>
             <div className={style.bar}>
                 <Link className={style.title} to="/">
-                    <div>
-                    <button className={style.title}><img className={style.logo} src={logo} alt="logo" />
-                        <h1 className={style.title}>Violeta Gómez</h1></button>
-                    </div>
+                    <button className={style.title}>
+                        <img className={style.logo} src={logo} alt="logo" />
+                        <h1 className={style.title}>Violeta Gómez</h1>
+                    </button>
                 </Link>
+                <button className={style.hamburger} onClick={toggleMenu}>
+                    ☰
+                </button>
             </div>
-            <div className={style.bar}>
-                <Link to="/subject">
-                    <button className={style.btn}><h3>Materias</h3></button>
+            <div className={`${style.menu} ${isOpen ? style.menuOpen : ''}`}>
+                <Link className={style.title} to="/subject">
+                    <h3 className={style.btn}>Materias</h3>
                 </Link>
-                <Link to="/contact">
-                    <button className={style.btn}><h3>Contacto</h3></button>
+                <Link className={style.title} to="/contact">
+                    <h3 className={style.btn}>Contacto</h3>
                 </Link>
             </div>
         </div>
-    )
+    );
 }
