@@ -1,3 +1,4 @@
+import React, {useEffect} from "react"
 import style from "./home.module.css"
 import contenido from "../../images/contenido.png"
 import virtual from "../../images/virtual.png"
@@ -5,6 +6,10 @@ import examen from "../../images/examen.png"
 import ejercicos from "../../images/ejercicios.png"
 
 export default function Home() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <div className={style.container}>
             <div className={style.background}>
