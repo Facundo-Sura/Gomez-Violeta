@@ -13,10 +13,10 @@ export default function Footer() {
                     <img className={style.logo} src={gmail} alt="gmail" />
                     <p className={style.line}>viogomez72@hotmail.com</p>
                 </div>
-                <div className={style.contact}>
+                <a className={style.contact} href="https://wa.me/qr/CBKEXELZUXX5G1">
                     <img className={style.logo} src={whatsapp} alt="whatapp" />
                     <p className={style.line}>+54 9 3513 69-2193</p>
-                </div>
+                </a>
             </div>
             <div className={style.form}>
                 <h2 className={style.title}>Redes</h2>
